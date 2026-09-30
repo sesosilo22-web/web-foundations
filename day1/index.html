@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-
-<html lang ="en">
+<html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Quicknotes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QuickNotes</title>
     </head>
+
     <body>
         <header>
             <nav>
@@ -14,34 +14,44 @@
                     <li><a href="about.html">about</a></li>
                 </ul>
             </nav>
-            <h1>Quicknotes</h1>
-            <p>capture ideas before they disappear  </p>
+
+            <h1>QuickNotes</h1>
+            <p>capture ideas before they disappear</p>
         </header>
+
         <main>
             <section>
                 <h2>add a note</h2>
+
                 <form id="note-form">
                     <label for="note-input">new note</label>
+
                     <input
                         type="text"
                         id="note-input"
                         name="note"
                         placeholder="what do you remember?"
                         required
-                    />
+                    >
+
                     <button type="submit">Add note</button>
                 </form>
             </section>
+
             <section>
                 <h2>your notes</h2>
+
                 <p id="note-count">you have two notes</p>
+
                 <ul id="note-list">
                     <li>revise html forms</li>
                     <li>push code to github</li>
                 </ul>
             </section>
         </main>
+
         <footer>
-            <p>&copy; 2026 quicknotes.built during web foundations</p>
+            <p>&copy; 2026 QuickNotes. Built during Web Foundations.</p>
         </footer>
-    
+    </body>
+</html>
