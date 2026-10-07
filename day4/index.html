@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my quicknotes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul id="menu">
+    <li>home</li>
+    <li>about</li>
+    <li>top</li>
+    <li style ="display:none">project</li>
+</ul>
+
+<section>
+
+        <p id="char-count">characters: 0</p>
+        <p id="word-count">word : 0</p>
+        <p>
+            <label for="note-text">Message</label>
+            <textarea
+            id="note-text"
+            name="notes"
+            placeholder="write you notes"
+            ></textarea>
+
+        </p>
+        <button type="button" id="clear-btn">clear</button>    
+        <button type="button" id="theme-toggle">toggle</button>
+</section>
+
+</body>
+<script src="script.js" defer></script>
+
+</html>

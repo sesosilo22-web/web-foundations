@@ -1,0 +1,23 @@
+:root { 
+    --primary-color: green;
+    --text-color : black;
+}
+
+body.dark {
+    --primary-color:darkgreen;
+    --text-color: white;
+
+}
+
+.warning {
+    color: orange;
+}
+
+#char-count {
+    color:var(--text-color);
+}
+
+.over{
+    color: red;
+    font-weight : bold;
+}
