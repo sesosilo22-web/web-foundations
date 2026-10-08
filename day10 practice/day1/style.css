@@ -1,0 +1,116 @@
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "segoe UI", Arial, sans-serif;
+    background-color: rgb(8, 81, 56);
+    font-weight: bold;
+    color: white;
+    line-height: 1.5;
+}
+
+header{
+    background-color: rgb(83, 142, 11);
+    padding: 20px 15px;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: black;
+}
+
+main{
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 0 15px;
+}
+
+section{
+    background-color:rgb(70, 132, 7);
+    padding: 20px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1 );
+}
+
+#note-form label{
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    color:black;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+button{
+    background-color: rgb(12, 148, 26);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: darkblue;
+}
+
+#note-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.note {
+    background-color:black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1 );
+}
+
+   
+
+footer{
+    background-color: rgb(83, 142, 11);
+    padding: 20px 15px;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: black;
+}
+
+@media (max-width: 600px) {
+        #note-form {
+            flex-direction: column;
+        }
+    }
+
+
+
+
+
+
