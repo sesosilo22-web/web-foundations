@@ -1,42 +1,41 @@
-const API_URL = "https://jsonplaceholder.typicode.com/posts";
 
-const loadusers= document.querySelector("#load-users");
-const statusText= document.querySelector("#status");
-const list= document.querySelector("#users-list");
-const form= document.querySelector("#note-form");
-const filterinput= document.querySelector("#filter-input");
+const API_URL = "https://jsonplaceholder.typicode.com/users";
 
-let users=[];
+const button = document.querySelector("#load-users");
+const statusText = document.querySelector("#status");
+const  list  = document.querySelector("#users-list");
+const filterInput = document.querySelector("#filter-input");
+
+let users = [];
 
 async function fetchUsers() {
     button.disabled = true;
-    status.textContent = "Loading users...";
-    usersContainer.textContent = "";
+    statusText.textContent = "Loading users...";
+    list.textContent ="";
 
     try {
-        const response = await fetch(
-            "https://jsonplaceholder.typicode.com/users"
-        );
+        const response = await fetch(API_URL);
 
         if (!response.ok) {
-            throw new Error("Failed to fetch users.");
+            throw new Error(`Status ${response.status}`);
         }
 
         users = await response.json();
 
         displayUsers(users);
+        statusText.textContent = `Loaded ${users.length} users.`;
 
-        status.textContent = "Users loaded successfully!";
     } catch (error) {
-        status.textContent = "Error loading users. Please try again.";
+        statusText.textContent = "Error loading users. Please try again.";
         console.error(error);
+
     } finally {
         button.disabled = false;
     }
 }
 
 function displayUsers(usersToDisplay) {
-    usersContainer.textContent = "";
+         list.textContent = "";
 
     usersToDisplay.forEach((user) => {
         const userCard = document.createElement("div");
@@ -58,7 +57,7 @@ function displayUsers(usersToDisplay) {
         userCard.appendChild(city);
         userCard.appendChild(company);
 
-        usersContainer.appendChild(userCard);
+        list.appendChild(userCard);
     });
 }
 
